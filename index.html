@@ -257,33 +257,30 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">EmotiveTalk: Expressive Talking Head Generation through Audio Information Decoupling and Emotional Video Diffusion</h1>
+            <h1 class="title is-1 publication-title">READ: Real-time and Efficient Asynchronous Diffusion for Audio-driven Talking Head Generation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">Haotian Wang<sup>1</sup>,</span>
               <span class="author-block">Yuzhe Weng<sup>1</sup>,</span>
-              <span class="author-block">Yueyan Li<sup>2</sup>,</span>
-              <span class="author-block">Zilu Guo<sup>1</sup>,</span>
               <span class="author-block">Jun Du<sup>1</sup>,</span>
-              <span class="author-block">Shutong Niu<sup>1</sup>,</span>
-              <span class="author-block">Jiefeng Ma<sup>1</sup>,</span>
-              <span class="author-block">Shan He<sup>3</sup>,</span>
-              <span class="author-block">Xiaoyan Wu<sup>3</sup>,</span>
-              <span class="author-block">Qiming Hu<sup>3</sup>,</span>
-              <span class="author-block">Bing Yin<sup>3</sup>,</span>
-              <span class="author-block">Cong Liu<sup>3</sup>,</span>
-              <span class="author-block">Qingfeng Liu<sup>3</sup></span>
+              <span class="author-block">Haoran Xu<sup>2</sup>,</span>
+              <span class="author-block">Xiaoyan Wu<sup>2</sup>,</span>
+              <span class="author-block">Shan He<sup>2</sup>,</span>
+              <span class="author-block">Bing Yin<sup>2</sup>,</span>
+              <span class="author-block">Cong Liu<sup>2</sup>,</span>
+              <span class="author-block">Jianqing Gao<sup>2</sup>,</span>
+              <span class="author-block">Qingfeng Liu<sup>1</sup><sup>2</sup></span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1&nbsp</sup>NERCSLIP, University of Science of Technology of China<br><sup>2&nbsp</sup>Imperial College London<br><sup>3&nbsp</sup>iFLYTEK CO.LTD.</span>
+              <span class="author-block"><sup>1&nbsp</sup>NERCSLIP, University of Science of Technology of China<br><sup>2&nbsp</sup>iFLYTEK</span>
             </div>
 
             <div class="column has-text-centered">
               <div class="publication-links">
                 <!-- Arxiv PDF link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2411.16726" target="_blank"
+                  <a href="https://arxiv.org/pdf/YOUR_REPO_HERE" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -294,7 +291,7 @@
 
                 <!-- Supplementary PDF link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2411.16726" target="_blank"
+                  <a href="https://arxiv.org/pdf/YOUR_REPO_HERE" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -316,7 +313,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2411.16726" target="_blank"
+                  <a href="https://arxiv.org/abs/YOUR_REPO_HERE" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -339,14 +336,8 @@
         <div class="column is-full">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-            <figure class="image">
-              <img src="static/images/firstpagebig.jpg" alt="Abstract Image">
-              <figcaption class="video-figcaption">
-                Figure1.We propose EmotiveTalk, an expressive talking head generation framework. Taking a single portrait and the driven audio as input, our method can generate expressive portrait video that syncs with the audio and customizes the speaking style with additional emotion control.
-              </figcaption>
-            </figure>
             <p>
-              Diffusion models have revolutionized the field of talking head generation, yet still face challenges in expressiveness, controllability, and stability in long-time generation. In this research, we propose an EmotiveTalk framework to address these issues. EmotiveTalk can generate expressive talking head videos, ensuring the promised controllability of emotions and stability during long-time generation, yielding state-of-the-art performance.
+              The introduction of diffusion models has brought significant advances to the field of audio-driven talking head generation. However, the extremely slow inference speed severely limits the practical implementation of diffusion-based talking head generation models. In this study, we propose READ, the first real-time diffusion-transformer-based talking head generation framework. Our approach first learns a spatiotemporal highly compressed video latent space via a temporal VAE, significantly reducing the token count to accelerate generation. To achieve better audio-visual alignment within this compressed latent space, a pre-trained Speech Autoencoder (SpeechAE) is proposed to generate temporally compressed speech latent codes corresponding to the video latent space. These latent representations are then modeled by a carefully designed Audio-to-Video Diffusion Transformer (A2V-DiT) backbone for efficient talking head synthesis. Furthermore, to ensure temporal consistency and accelerated inference in extended generation, we propose a novel asynchronous noise scheduler (ANS) for both the training and inference process of our framework. The ANS leverages asynchronous add-noise and asynchronous motion-guided generation in the latent space, ensuring consistency in generated video clips. Experimental results demonstrate that READ outperforms state-of-the-art methods by generating competitive talking head videos with significantly reduced runtime, achieving an optimal balance between quality and speed while maintaining robust metric stability in long-time generation.
             </p>
           </div>
         </div>
