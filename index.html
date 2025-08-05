@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriately as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Academic Project Page</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  
+  <style>
+    /* 图片轮播样式 */
+    figure.image {
+      margin-bottom: 20px; /* 控制整个figure的下方间距 */
+      text-align: center; /* 居中对齐内容 */
+    }
+
+    figure.image img {
+      max-width: 100%; /* 确保图片不超出容器宽度 */
+      height: auto;
+      display: block;
+      margin: 0 auto 10px auto; /* 居中图片并添加下方间距 */
+    }
+
+    figure.image figcaption {
+      font-size: 1.1em; /* 增大图注字体 */
+      color: #6c757d;
+      text-align: center; /* 居中图注 */
+      margin-top: 8px; /* 图注与图片之间的间距 */
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* 自定义子标题样式 */
+    .custom-subtitle {
+      font-weight: 600; /* 适当加粗 */
+      color: #4a4a4a; /* 可选：自定义颜色 */
+      margin-top: 20px; /* 增加h2和h3之间的间距 */
+    }
+
+    /* 在子标题前添加圆点 */
+    .custom-subtitle::before {
+      content: "• "; /* 添加圆点和一个空格 */
+      color: #000; /* 圆点颜色，可根据需要调整 */
+      font-weight: inherit; /* 继承父元素的字体粗细 */
+    }
+
+    .main-title {
+      margin-bottom: 0.5rem; /* 调整数值以实现所需的间距 */
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: center; /* 居中所有视频 */
+      gap: 1px; /* 将视频之间的间隔从10px增大到20px */
+      flex-wrap: wrap; /* 在小屏幕上允许换行 */
+      padding: 1px; /* 将内边距从5px增大到10px */
+    }
+
+    /* 视频项样式 */
+    .video-item {
+      flex: 0 1 30%; /* 默认每行显示三个视频 */
+      display: flex;
+      flex-direction: column; /* 垂直排列视频和图注 */
+      align-items: center; /* 居中视频和图注 */
+      margin-bottom: 1px; /* 将下方间距从10px增大到20px */
+      transition: transform 0.3s; /* 平滑缩放过渡 */
+    }
+
+    .video-item-2 {
+      flex: 0 1 40%; /* 默认每行显示三个视频 */
+      display: flex;
+      flex-direction: column; /* 垂直排列视频和图注 */
+      align-items: center; /* 居中视频和图注 */
+      margin-bottom: 100px; /* 将下方间距从10px增大到20px */
+      transition: transform 0.3s; /* 平滑缩放过渡 */
+    }
+
+    /* 缩放视频项 */
+    .scaled-video {
+      transform: scale(0.8); /* 缩放至80% */
+      transform-origin: center; /* 从中心缩放 */
+    }
+    
+    .scaled-video-2 {
+      transform: scale(0.7); /* 缩放至70% */
+      transform-origin: center; /* 从中心缩放 */
+    }
+
+    /* 视频样式 */
+    .video-item video,
+    .video-item-2 video {
+      width: 100%; /* 视频宽度保持为容器的100% */
+      height: auto; /* 保持视频的纵横比 */
+      align-items: center;
+      display: block;
+      border-radius: 8px; /* 可选：为视频添加圆角 */
+    }
+
+    /* 图注样式 */
+    .video-figcaption {
+      font-size: 1.1em; /* 增大图注字体 */
+      color: #6c757d;
+      text-align: center; /* 居中图注 */
+      margin-top: 8px; /* 图注与视频之间的间距保持为8px */
+      width: 100%; /* 确保图注宽度与视频一致 */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .video-prompt {
+      font-size: 1.4em;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      color: #333; /* 主提示文本颜色 */
+      text-align: center; /* 居中提示文本 */
+      width: 100%; /* 与视频宽度一致 */
+      margin: 0 auto 0.5em auto; /* 居中提示并添加下方间距 */
+    }
+
+    /* 轮播视频样式 */
+    .carousel .item figure {
+      text-align: center; /* 居中视频和图注 */
+      margin: 0; /* 移除默认的margin */
+    }
+
+    .carousel .item video {
+      width: 100%; /* 视频宽度保持为容器的100% */
+      height: auto; /* 保持视频的纵横比 */
+      align-items: center;
+      display: block;
+      border-radius: 8px; /* 可选：为视频添加圆角 */
+    }
+
+    .carousel .video-figcaption {
+      font-size: 1.1em; /* 增大图注字体 */
+      color: #6c757d;
+      text-align: center;
+      margin-top: 8px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-family: Arial, sans-serif;
+      text-align: center; /* 确保表格文字水平居中 */
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      /* 移除 Flexbox 属性 */
+      /* display: flex; */
+      /* justify-content: center; */
+      /* align-items: center; */
+      text-align: center; /* 水平居中 */
+      vertical-align: middle; /* 垂直居中 */
+      font-size: 1em; /* 确保表格文字清晰 */
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .highlight {
+      background-color: #e7f6e7; /* Light green for emphasis */
+      font-weight: bold;
+    }
+    .prompt-text {
+      font-style: italic; /* 斜体 */
+      font-weight: bold;  /* 加粗 */
+      color: #6495ED;     /* 设置文字颜色，可以换成你想要的颜色 */
+    }
+
+
+    @media (max-width: 1024px) {
+      .video-item,
+      .video-item-2 {
+        flex: 0 1 45%; /* 中等屏幕上每行显示两个视频 */
+      }
+      
+      .video-item video,
+      .video-item-2 video,
+      .video-item figcaption,
+      .video-item-2 figcaption,
+      .video-prompt {
+        width: 100%; /* 在中等屏幕上适当调整宽度 */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .video-item,
+      .video-item-2 {
+        flex: 0 1 100%; /* 小屏幕上每行显示一个视频 */
+      }
+
+      .video-item video,
+      .video-item-2 video,
+      .video-item figcaption,
+      .video-item-2 figcaption,
+      .video-prompt {
+        width: 100%; /* 在小屏幕上视频占满容器宽度 */
+      }
+
+      .video-container {
+        gap: 10px; /* 将小屏幕上的间隔从5px增大到10px */
+        padding: 10px; /* 保持内边距为10px */
+      }
+    }
+
+    /* 专门为 Image-source/Text-source Emotion Control 部分增加的样式 */
+    .emotion-control-container {
+      gap: 30px; /* 增加视频之间的间距 */
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">EmotiveTalk: Expressive Talking Head Generation through Audio Information Decoupling and Emotional Video Diffusion</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">Haotian Wang<sup>1</sup>,</span>
+              <span class="author-block">Yuzhe Weng<sup>1</sup>,</span>
+              <span class="author-block">Yueyan Li<sup>2</sup>,</span>
+              <span class="author-block">Zilu Guo<sup>1</sup>,</span>
+              <span class="author-block">Jun Du<sup>1</sup>,</span>
+              <span class="author-block">Shutong Niu<sup>1</sup>,</span>
+              <span class="author-block">Jiefeng Ma<sup>1</sup>,</span>
+              <span class="author-block">Shan He<sup>3</sup>,</span>
+              <span class="author-block">Xiaoyan Wu<sup>3</sup>,</span>
+              <span class="author-block">Qiming Hu<sup>3</sup>,</span>
+              <span class="author-block">Bing Yin<sup>3</sup>,</span>
+              <span class="author-block">Cong Liu<sup>3</sup>,</span>
+              <span class="author-block">Qingfeng Liu<sup>3</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1&nbsp</sup>NERCSLIP, University of Science of Technology of China<br><sup>2&nbsp</sup>Imperial College London<br><sup>3&nbsp</sup>iFLYTEK CO.LTD.</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2411.16726" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2411.16726" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/YOUR_REPO_HERE" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2411.16726" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <figure class="image">
+              <img src="static/images/firstpagebig.jpg" alt="Abstract Image">
+              <figcaption class="video-figcaption">
+                Figure1.We propose EmotiveTalk, an expressive talking head generation framework. Taking a single portrait and the driven audio as input, our method can generate expressive portrait video that syncs with the audio and customizes the speaking style with additional emotion control.
+              </figcaption>
+            </figure>
+            <p>
+              Diffusion models have revolutionized the field of talking head generation, yet still face challenges in expressiveness, controllability, and stability in long-time generation. In this research, we propose an EmotiveTalk framework to address these issues. EmotiveTalk can generate expressive talking head videos, ensuring the promised controllability of emotions and stability during long-time generation, yielding state-of-the-art performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper method -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+            <figure class="image">
+              <img src="static/images/overall10.jpg" alt="Method Image">
+              <figcaption class="video-figcaption">
+                Figure2.The framework of EmotiveTalk.
+              </figcaption>
+            </figure>
+            <p>
+              We propose a Vision-guided Audio Information Decouple (V-AID) approach to facilitate the decoupling of lip and expression related information contained in audio signals and also the alignment of audio representations with video representations under the guidance of vision facial motion information. Specifically, to achieve better alignment between speech and expression representation spaces, we present a Diffusion-based Co-speech Temporal Expansion (Di-CTE) module, which generates temporal expression-related representations from audio under utterance emotional conditions from multiple optional driven sources. Then, to effectively drive the decoupled representations, we propose an efficient video diffusion framework for expressive talking head generation which demonstrates effectiveness and enhanced stability in talking head video generation performance. The backbone incorporates an Expression Decoupling Injector (EDI) module in our backbone to achieve the automatic decoupling of expression information from the reference portrait while facilitating the injection of expression-driven information.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper method -->
+    
+  <!-- 视频展示部分1 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <!-- 居中的主标题 -->
+        <h2 class="title is-3 has-text-centered main-title">Audio-Driven Talking Head Generation</h2>
+        <!-- 子标题，字体更小，居中对齐，并加粗 -->
+        <h3 class="subtitle is-4 has-text-centered"> </h3>
+        <h3 class="subtitle is-4 custom-subtitle">Expressive Talking Generation</h3>
+        <div class="video-container">
+          <div class="video-item scaled-video">
+            <!-- 仅在下方显示图注 -->
+            <figure>
+              <video poster="" id="video1a_unique" preload="auto" controls>
+                <source src="static/videos/man_youhua_boy.png_crop_000003.mp4.wav_checkpoint-452000.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Vocal Source: TED Speech
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video2a_unique" preload="auto" controls>
+                <source src="static/videos/expressivefemale.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Vocal Source: Christiana Figueres
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video3a_unique" preload="auto" controls>
+                <source src="static/videos/girl_jingling2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Vocal Source: TED Speech
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 结束 视频展示部分1 -->
+
+  <!-- 视频展示部分2 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <!-- 子标题，字体更小，居中对齐，并加粗 -->
+        <h3 class="subtitle is-4 custom-subtitle">Multiple Styles Generation</h3>
+        <div class="video-container">
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video4a_unique" preload="auto" controls>
+                <source src="static/videos/singfemale.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Song: Love the Way You Lie, Rihanna
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video5a_unique" preload="auto" controls>
+                <source src="static/videos/speechfemale2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: Female Education, Emily Blunt
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video6a_unique" preload="auto" controls>
+                <source src="static/videos/talkfemale2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Talk: TED Talk
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 结束 视频展示部分2 -->
+
+  <!-- V-AID消融结果 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <!-- 子标题，字体更小，居中对齐，并加粗 -->
+        <h3 class="subtitle is-4 custom-subtitle">Quanlity Ablation on "Visual-guided Audio Information Decouple (V-AID)" Module</h3>
+        <div class="video-container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+          <div class="video-item scaled-video">
+            <figure>
+              <figcaption class="video-figcaption" style="font-weight: bold; font-size: 1.2rem;">
+                End-to-end Driven (without V-AID)
+              </figcaption>
+              <video poster="" id="video4ai_unique" preload="auto" controls>
+                <source src="static/videos/man_youhua_boy_e2e.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>    
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <figcaption class="video-figcaption" style="font-weight: bold; font-size: 1.2rem;">
+                End-to-end Driven (without V-AID)
+              </figcaption>
+              <video poster="" id="video5ai_unique" preload="auto" controls>
+                <source src="static/videos/man_1_e2e.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figcaption class="video-figcaption" style="font-weight: bold; font-size: 1.2rem;">
+                End-to-end Driven (without V-AID)
+              </figcaption>
+            <figure>
+              <video poster="" id="video6ai_unique" preload="auto" controls>
+                <source src="static/videos/woman_2_e2e.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <figcaption class="video-figcaption" style="font-weight: bold; font-size: 1.2rem;">
+                End-to-end Driven (without V-AID)
+              </figcaption>
+              <video poster="" id="video7ai_unique" preload="auto" controls>
+                <source src="static/videos/woman_4_e2e.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <figcaption class="video-figcaption" style="font-weight: bold; font-size: 1.2rem; color: #00008B;">
+                Driven with V-AID Module
+              </figcaption>
+              <video poster="" id="video8ai_unique" preload="auto" controls>
+                <source src="static/videos/man_youhua_boy_withvaid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <figcaption class="video-figcaption" style="font-weight: bold; font-size: 1.2rem; color: #00008B;">
+                Driven with V-AID Module
+              </figcaption>
+              <video poster="" id="video9ai_unique" preload="auto" controls>
+                <source src="static/videos/man_1_withvaid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <figcaption class="video-figcaption" style="font-weight: bold; font-size: 1.2rem; color: #00008B;">
+                Driven with V-AID Module
+              </figcaption>
+              <video poster="" id="video9ai_unique" preload="auto" controls>
+                <source src="static/videos/woman_2_withvaid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <figcaption class="video-figcaption" style="font-weight: bold; font-size: 1.2rem; color: #00008B">
+                Driven with V-AID Module
+              </figcaption>
+              <video poster="" id="video9ai_unique" preload="auto" controls>
+                <source src="static/videos/woman_4_withvaid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 结束 V-AID消融结果-->
+  
+  <!-- 视频展示部分 Performance on Real Images -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <!-- 子标题，字体更小，居中对齐，并加粗 -->
+        <h3 class="subtitle is-4 custom-subtitle">Real Images Generation Performance</h3>
+        <div class="video-container">
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video4ai_unique" preload="auto" controls>
+                <source src="static/videos/woman_guajie2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: Michelle Obama
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video5ai_unique" preload="auto" controls>
+                <source src="static/videos/woman_menglucut.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: Michelle Obama
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video6ai_unique" preload="auto" controls>
+                <source src="static/videos/woman_zhiyuan.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: Michelle Obama
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video7ai_unique" preload="auto" controls>
+                <source src="static/videos/man_tuling_2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: Barack Hussein Obama at the graduation ceremony
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video8ai_unique" preload="auto" controls>
+                <source src="static/videos/man_cluoshort.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: Barack Hussein Obama
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video9ai_unique" preload="auto" controls>
+                <source src="static/videos/man_lh2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: Cory Gardner
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video10ai_unique" preload="auto" controls>
+                <source src="static/videos/woman_xuesheng.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: Tina Smith
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video11ai_unique" preload="auto" controls>
+                <source src="static/videos/man_qiangsenshort2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: Rand Paul
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video12ai_unique" preload="auto" controls>
+                <source src="static/videos/man_hanshi2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: Barack Hussein Obama
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 结束 视频展示部分 Performance on Real Images -->
+  
+  <!-- Long-term Generation 部分 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h3 class="subtitle is-4 custom-subtitle">Long-term Generation Performance</h3>
+        <div class="video-container emotion-control-container">
+          <div class="video-item-2 scaled-video-2">
+            <!-- 仅在上方显示图注 -->
+            <div class="video-prompt">
+              Long-time Generation Results
+            </div>
+            <figure>
+              <video poster="" id="video13ai_unique" preload="auto" controls>
+                <source src="static/videos/man_long.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+          <div class="video-item-2 scaled-video-2">
+            <div class="video-prompt">
+              Long-time Generation Results
+            </div>
+            <figure>
+              <video poster="" id="video14ai_unique" preload="auto" controls>
+                <source src="static/videos/woman_long.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 结束 Long-term Generation 部分 -->
+  
+  <!-- 轮播视频*4 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h3 class="subtitle is-4 custom-subtitle">Cross Actors Generation</h3>
+        <div id="results-carousel1" class="carousel results-carousel">
+          <div class="item item-video1">
+            <figure>
+              <video poster="" id="video7a_unique" preload="auto" controls>
+                <source src="static/videos/betonme1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Song: Bet on Me, Walk off the Earth & D Smoke
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item item-video2">
+            <figure>
+              <video poster="" id="video8a_unique" preload="auto" controls>
+                <source src="static/videos/trump.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: Donald John Trump
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item item-video3">
+            <figure>
+              <video poster="" id="video9a_unique" preload="auto" controls>
+                <source src="static/videos/tedmale.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: TED Speech
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item item-video4">
+            <figure>
+              <video poster="" id="video10a_unique" preload="auto" controls>
+                <source src="static/videos/tedfemale2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Talk: Christiana Figueres
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+  <!-- 视频展示部分 Performance on the CelebV-HQ dataset dataset -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <!-- 子标题，字体更小，居中对齐，并加粗 -->
+        <h3 class="subtitle is-4 custom-subtitle">Performance on the CelebV-HQ dataset (more noise)</h3>
+        <div class="video-container">
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video4ai_celebvhq" preload="auto" controls>
+                <source src="static/videos/CelebV2_8short.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech and Image: from the CelebV-HQ dataset
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video5ai_celebvhq" preload="auto" controls>
+                <source src="static/videos/CelebV1_1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech and Image: from the CelebV-HQ dataset
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video6ai_celebvhq" preload="auto" controls>
+                <source src="static/videos/CelebV1_2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech and Image: from the CelebV-HQ dataset
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video7ai_celebvhq" preload="auto" controls>
+                <source src="static/videos/CelebV2_6.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech and Image: from the CelebV-HQ dataset
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video8ai_celebvhq" preload="auto" controls>
+                <source src="static/videos/CelebV2_4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech and Image: from the CelebV-HQ dataset
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video9ai_celebvhq" preload="auto" controls>
+                <source src="static/videos/CelebV2_2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech and Image: from the CelebV-HQ dataset
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 结束 视频展示部分 Performance on the CelebV-HQ dataset -->
+  
+  <!-- 轮播视频*2 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h3 class="subtitle is-4 custom-subtitle">Different Resolutions Generation (512-resolution and 1024-resolution)</h3>
+        <div id="results-carousel2" class="carousel results-carousel">
+          <div class="item item-video5">
+            <figure>
+              <video poster="" id="video11a_unique" preload="auto" controls>
+                <source src="static/videos/5121024male.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: Donald John Trump
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item item-video6">
+            <figure>
+              <video poster="" id="video12a_unique" preload="auto" controls>
+                <source src="static/videos/5121024female.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Talk: Christiana Figueres
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 结束 轮播视频*2 -->
+  
+  <!-- 不同语言 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h3 class="subtitle is-4 custom-subtitle">Different Languages Performance (e.g. Chinese, French and Cantonese)</h3>
+        <div class="video-container">
+          <div class="video-item scaled-video">
+            <!-- 仅在下方显示图注 -->
+            <figure>
+              <video poster="" id="video13a_unique" preload="auto" controls>
+                <source src="static/videos/chinesemale.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <figcaption class="video-figcaption">
+                Vocal Source: Chinese, Talk
+              </figcaption> -->
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video14a_unique" preload="auto" controls>
+                <source src="static/videos/francefemale1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <figcaption class="video-figcaption">
+                Vocal Source: French, Talk
+              </figcaption> -->
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video15a_unique" preload="auto" controls>
+                <source src="static/videos/yueyufemale1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <figcaption class="video-figcaption">
+                Vocal Source: Cantonese, Broadcast
+              </figcaption> -->
+            </figure>
+          </div>
+        </div>
+        <div class="video-container">
+          <div class="video-item scaled-video">
+            <!-- 仅在下方显示图注 -->
+            <figure>
+              <video poster="" id="video16a_unique" preload="auto" controls>
+                <source src="static/videos/chinesefemale.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Vocal Source: Chinese, Talk
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video17a_unique" preload="auto" controls>
+                <source src="static/videos/francefemale2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Vocal Source: French, Talk
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video18a_unique" preload="auto" controls>
+                <source src="static/videos/yueyufemale2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Vocal Source: Cantonese, Broadcast
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 结束 不同语言 -->
+  
+  <!-- Emotion Controllable Generation -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered main-title">Emotion Controllable Generation</h2>
+        <h3 class="subtitle is-4"> &nbsp</h3>
+        <h3 class="subtitle is-4 custom-subtitle">Different Emotions Generation (e.g. Neutral, Angry, Happy, Surprised)</h3>
+        <div id="results-carousel3" class="carousel results-carousel">
+          <div class="item item-video7">
+            <figure>
+              <video poster="" id="video19a_unique" preload="auto" controls>
+                <source src="static/videos/emotionalmale.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Voice Source: From HDTF Dataset
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item item-video8">
+            <figure>
+              <video poster="" id="video20a_unique" preload="auto" controls>
+                <source src="static/videos/emotionalfemale.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Voice Source: From HDTF Dataset
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 结束 Emotion Controllable Generation -->
+
+  <!-- Image-source/Text-source Emotion Control 部分 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h3 class="subtitle is-4 custom-subtitle">Image-source/Text-source Emotion Control</h3>
+        <div class="video-container emotion-control-container">
+          <div class="video-item-2 scaled-video-2">
+            <!-- 仅在上方显示图注 -->
+            <div class="video-prompt">
+              Image Prompt: <span class="prompt-text">An Angry Image</span>
+            </div>
+            <figure>
+              <video poster="" id="video21a_unique" preload="auto" controls>
+                <source src="static/videos/media25.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+          <div class="video-item-2 scaled-video-2">
+            <div class="video-prompt">
+              Text Prompt: <span class="prompt-text">Be cheerful and say that sentence</span>
+            </div>
+            <figure>
+              <video poster="" id="video22a_unique" preload="auto" controls>
+                <source src="static/videos/media24.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 结束 Image-source/Text-source Emotion Control 部分 -->
+  
+ <!-- Comparison with SOTA Methods-->
+ <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered main-title">Comparison with SOTA Methods</h2>
+        <h3 class="subtitle is-4"> &nbsp</h3>
+        <h3 class="subtitle is-4 custom-subtitle">Overall Comparison</h3>
+        <table>
+          <thead>
+            <tr>
+              <th rowspan="2">Methods</th>
+              <th rowspan="2">Driven</th>
+              <th colspan="5">HDTF / MEAD</th>
+            </tr>
+            <tr>
+              <th>FID (↓)</th>
+              <th>FVD (↓)</th>
+              <th>Sync-C (↑)</th>
+              <th>Sync-D (↓)</th>
+              <th>E-FID (↓)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SadTalker</td>
+              <td>A</td>
+              <td>22.34 / <b>36.88</b></td>
+              <td>589.63 / <b>132.27</b></td>
+              <td>7.75 / 6.46</td>
+              <td>7.36 / 8.07</td>
+              <td>0.66 / 1.14</td>
+            </tr>
+            <tr>
+              <td>Anitalker</td>
+              <td>A</td>
+              <td>51.66 / 68.01</td>
+              <td>583.70 / 941.49</td>
+              <td>7.73 / 6.76</td>
+              <td>7.43 / 7.64</td>
+              <td>1.11 / 1.11</td>
+            </tr>
+            <tr>
+              <td>Aniportrait</td>
+              <td>A</td>
+              <td>17.71 / 42.43</td>
+              <td>676.30 / 379.08</td>
+              <td>3.75 / 2.30</td>
+              <td>10.63 / 12.38</td>
+              <td>1.21 / 2.69</td>
+            </tr>
+            <tr>
+              <td>Hallo</td>
+              <td>A</td>
+              <td>17.15 / 52.07</td>
+              <td>276.31 / 210.56</td>
+              <td>7.99 / <b>7.45</b></td>
+              <td>7.50 / 7.47</td>
+              <td>0.65 / 0.60</td>
+            </tr>
+            <tr class="highlight">
+              <td>Ours</td>
+              <td>A</td>
+              <td><b>16.64</b> / 53.21</td>
+              <td><b>140.96</b> / 207.67</td>
+              <td><b>8.24</b> / 6.82</td>
+              <td><b>7.09 / 7.43</b></td>
+              <td><b>0.54 / 0.57</b></td>
+            </tr>
+            <tr>
+              <td>PD-FGC</td>
+              <td>A+V</td>
+              <td>67.97 / 121.46</td>
+              <td>464.90 / 353.75</td>
+              <td>7.30 / 5.15</td>
+              <td>7.72 / 8.77</td>
+              <td>0.74 / 1.92</td>
+            </tr>
+            <tr>
+              <td>StylkTalk</td>
+              <td>A+V</td>
+              <td>29.65 / 118.48</td>
+              <td>184.60 / 197.18</td>
+              <td>4.34 / 3.86</td>
+              <td>10.35 / 10.74</td>
+              <td>0.42 / 0.56</td>
+            </tr>
+            <tr>
+              <td>DreamTalk</td>
+              <td>A+V</td>
+              <td>29.37 / 105.92</td>
+              <td>263.78 / 204.48</td>
+              <td>6.80 / 5.64</td>
+              <td>8.03 / 8.69</td>
+              <td>0.55 / 0.87</td>
+            </tr>
+            <tr class="highlight">
+              <td>Ours</td>
+              <td>A+V</td>
+              <td><b>16.09 / 50.84</b></td>
+              <td><b>120.70 / 153.71</b></td>
+              <td><b>8.41 / 6.79</b></td>
+              <td><b>7.11 / 7.58</b></td>
+              <td><b>0.34 / 0.40</b></td>
+            </tr>
+            <tr>
+              <td>Ground Truth</td>
+              <td>A+V</td>
+              <td>-</td>
+              <td>-</td>
+              <td>8.63 / 7.30</td>
+              <td>6.75 / 8.31</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <!-- 结束 Overall comparison -->
+
+  <!-- 轮播视频*2 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h3 class="subtitle is-4 custom-subtitle">Case Study on Audio-Driven Generation</h3>
+        <div id="results-carousel1" class="carousel results-carousel">
+          <div class="item item-video1add">
+            <figure>
+              <video poster="" id="video19a_add" controls>
+                <source src="static/videos/woman1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Voice Source: HDTF Dataset
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item item-video1">
+            <figure>
+              <video poster="" id="video19a_unique" preload="auto" controls>
+                <source src="static/videos/man1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Voice Source: HDTF Dataset
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+  <!-- 简化后的视频展示 -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h3 class="subtitle is-4 custom-subtitle">Case Study on Emotion Control (e.g. Neutral to Happy)</h3>
+      <figure class="image">
+        <video poster="" id="video21a_unique" preload="auto" controls>
+          <source src="static/videos/woman2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="video-figcaption">
+          Voice Source: HDTF Dataset
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+  
+  <!-- BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{wang2024emotivetalkexpressivetalkinghead,
+  title={EmotiveTalk: Expressive Talking Head Generation through Audio Information Decoupling and Emotional Video Diffusion}, 
+  author={Haotian Wang and Yuzhe Weng and Yueyan Li and Zilu Guo and Jun Du and Shutong Niu and Jiefeng Ma and Shan He and Xiaoyan Wu and Qiming Hu and Bing Yin and Cong Liu and Qingfeng Liu},
+  year={2024},
+  eprint={2411.16726},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2411.16726}, 
+}</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 更新后的 JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 如果不再使用播放按钮，以下 JavaScript 可以移除或注释掉
+      /*
+      // 获取所有播放按钮
+      const playButtons = document.querySelectorAll('.play-button');
+
+      playButtons.forEach(button => {
+          const videoId = button.getAttribute('data-video');
+          const video = document.getElementById(videoId);
+
+          // 点击按钮播放或暂停视频
+          button.addEventListener('click', function () {
+              if (video.paused) {
+                  video.play();
+                  this.textContent = '暂停播放';
+              } else {
+                  video.pause();
+                  this.textContent = '开始播放';
+              }
+          });
+
+          // 当视频播放结束时，更新按钮文本
+          video.addEventListener('ended', function () {
+              button.textContent = '开始播放';
+          });
+      });
+      */
+
+      // 新增功能：当一个视频开始播放时，暂停所有其他视频
+      const videos = document.querySelectorAll('video');
+
+      videos.forEach((video) => {
+          video.addEventListener('play', () => {
+              videos.forEach((vid) => {
+                  if (vid !== video && !vid.paused) {
+                      vid.pause();
+                  }
+              });
+          });
+      });
+    });
+  </script>
+  <!-- Statcounter tracking code -->
+    
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+</body>
+</html>
