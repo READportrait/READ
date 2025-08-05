@@ -353,13 +353,13 @@
           <h2 class="title is-3">Method</h2>
           <div class="content has-text-justified">
             <figure class="image">
-              <img src="static/images/overall10.jpg" alt="Method Image">
+              <img src="static/images/overall.png" alt="Method Image">
               <figcaption class="video-figcaption">
-                Figure2.The framework of EmotiveTalk.
+                Figure2.The framework of READ
               </figcaption>
             </figure>
             <p>
-              We propose a Vision-guided Audio Information Decouple (V-AID) approach to facilitate the decoupling of lip and expression related information contained in audio signals and also the alignment of audio representations with video representations under the guidance of vision facial motion information. Specifically, to achieve better alignment between speech and expression representation spaces, we present a Diffusion-based Co-speech Temporal Expansion (Di-CTE) module, which generates temporal expression-related representations from audio under utterance emotional conditions from multiple optional driven sources. Then, to effectively drive the decoupled representations, we propose an efficient video diffusion framework for expressive talking head generation which demonstrates effectiveness and enhanced stability in talking head video generation performance. The backbone incorporates an Expression Decoupling Injector (EDI) module in our backbone to achieve the automatic decoupling of expression information from the reference portrait while facilitating the injection of expression-driven information.
+              In this research, we introduce READ, the first real-time diffusion-transformer-based talking head generation framework. Our framework incorporates a pre-trained temporal VAE with a high spatiotemporal compression ratio of 32×32×8 pixels per token. To achieve better audio-visual alignment in the compressed latent space, we pre-train a Speech Autoencoder (SpeechAE) by self-supervising to generate temporally compressed speech latent codes that preserve essential acoustic information corresponding to the compressed video latent space. Then, an Audio-to-Video Diffusion Transformer (A2V-DiT) is designed to generate video latents under speech latent conditions efficiently. The whole training and inference process of our framework is under the proposed Asynchronous Noise Scheduler (ANS), which implements an asynchronous add-noise forward process and an asynchronous motion-guided reverse process to effectively generate long-time videos.
             </p>
           </div>
         </div>
@@ -376,7 +376,7 @@
         <h2 class="title is-3 has-text-centered main-title">Audio-Driven Talking Head Generation</h2>
         <!-- 子标题，字体更小，居中对齐，并加粗 -->
         <h3 class="subtitle is-4 has-text-centered"> </h3>
-        <h3 class="subtitle is-4 custom-subtitle">Expressive Talking Generation</h3>
+        <h3 class="subtitle is-4 custom-subtitle">Real-time Expressive Talking Generation</h3>
         <div class="video-container">
           <div class="video-item scaled-video">
             <!-- 仅在下方显示图注 -->
