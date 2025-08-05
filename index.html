@@ -619,14 +619,12 @@
         <h2 class="title is-3 has-text-centered main-title">Comparison with SOTA Methods</h2>
         <h3 class="subtitle is-4"> &nbsp</h3>
         <h3 class="subtitle is-4 custom-subtitle">Overall Comparison</h3>
-        <table>
+        <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; text-align: center; font-family: sans-serif;">
           <thead>
-            <tr>
-              <th rowspan="2">Methods</th>
-              <th rowspan="2">Driven</th>
-              <th colspan="5">HDTF / MEAD</th>
-            </tr>
-            <tr>
+            <tr style="background-color: #f2f2f2;">
+              <th>Dataset</th>
+              <th>Method</th>
+              <th>Runtime(s)</th>
               <th>FID (↓)</th>
               <th>FVD (↓)</th>
               <th>Sync-C (↑)</th>
@@ -635,95 +633,118 @@
             </tr>
           </thead>
           <tbody>
+            <!-- HDTF Dataset -->
             <tr>
-              <td>SadTalker</td>
-              <td>A</td>
-              <td>22.34 / <b>36.88</b></td>
-              <td>589.63 / <b>132.27</b></td>
-              <td>7.75 / 6.46</td>
-              <td>7.36 / 8.07</td>
-              <td>0.66 / 1.14</td>
-            </tr>
-            <tr>
-              <td>Anitalker</td>
-              <td>A</td>
-              <td>51.66 / 68.01</td>
-              <td>583.70 / 941.49</td>
-              <td>7.73 / 6.76</td>
-              <td>7.43 / 7.64</td>
-              <td>1.11 / 1.11</td>
-            </tr>
-            <tr>
-              <td>Aniportrait</td>
-              <td>A</td>
-              <td>17.71 / 42.43</td>
-              <td>676.30 / 379.08</td>
-              <td>3.75 / 2.30</td>
-              <td>10.63 / 12.38</td>
-              <td>1.21 / 2.69</td>
-            </tr>
-            <tr>
+              <td rowspan="6">HDTF</td>
               <td>Hallo</td>
-              <td>A</td>
-              <td>17.15 / 52.07</td>
-              <td>276.31 / 210.56</td>
-              <td>7.99 / <b>7.45</b></td>
-              <td>7.50 / 7.47</td>
-              <td>0.65 / 0.60</td>
+              <td>212.002</td>
+              <td>15.929</td>
+              <td>315.904</td>
+              <td>6.995</td>
+              <td>7.819</td>
+              <td>0.931</td>
             </tr>
-            <tr class="highlight">
+            <tr>
+              <td>EchoMimic</td>
+              <td>124.105</td>
+              <td>18.384</td>
+              <td>557.809</td>
+              <td>5.852</td>
+              <td>9.052</td>
+              <td><b>0.927</b></td>
+            </tr>
+            <tr>
+              <td>Sonic</td>
+              <td>83.584</td>
+              <td>16.894</td>
+              <td>245.416</td>
+              <td>8.525</td>
+              <td><b>6.576</b></td>
+              <td>0.932</td>
+            </tr>
+            <tr>
+              <td>AniPortrait</td>
+              <td>76.778</td>
+              <td>17.603</td>
+              <td>503.622</td>
+              <td>3.555</td>
+              <td>10.830</td>
+              <td>2.323</td>
+            </tr>
+            <tr>
+              <td>AniTalker</td>
+              <td>13.577</td>
+              <td>39.155</td>
+              <td>514.388</td>
+              <td>5.838</td>
+              <td>8.736</td>
+              <td>1.523</td>
+            </tr>
+            <tr style="background-color: #e0f2e0;">
               <td>Ours</td>
-              <td>A</td>
-              <td><b>16.64</b> / 53.21</td>
-              <td><b>140.96</b> / 207.67</td>
-              <td><b>8.24</b> / 6.82</td>
-              <td><b>7.09 / 7.43</b></td>
-              <td><b>0.54 / 0.57</b></td>
+              <td><b>4.421</b></td>
+              <td><b>15.073</b></td>
+              <td><b>235.319</b></td>
+              <td><b>8.658</b></td>
+              <td>6.890</td>
+              <td>0.955</td>
+            </tr>
+            
+            <!-- MEAD Dataset -->
+            <tr>
+              <td rowspan="6">MEAD</td>
+              <td>Hallo</td>
+              <td>212.002</td>
+              <td>52.300</td>
+              <td>292.983</td>
+              <td>6.014</td>
+              <td>8.822</td>
+              <td>1.171</td>
             </tr>
             <tr>
-              <td>PD-FGC</td>
-              <td>A+V</td>
-              <td>67.97 / 121.46</td>
-              <td>464.90 / 353.75</td>
-              <td>7.30 / 5.15</td>
-              <td>7.72 / 8.77</td>
-              <td>0.74 / 1.92</td>
+              <td>EchoMimic</td>
+              <td>124.105</td>
+              <td>65.771</td>
+              <td>667.999</td>
+              <td>5.482</td>
+              <td>9.128</td>
+              <td>1.448</td>
             </tr>
             <tr>
-              <td>StylkTalk</td>
-              <td>A+V</td>
-              <td>29.65 / 118.48</td>
-              <td>184.60 / 197.18</td>
-              <td>4.34 / 3.86</td>
-              <td>10.35 / 10.74</td>
-              <td>0.42 / 0.56</td>
+              <td>Sonic</td>
+              <td>83.854</td>
+              <td>47.070</td>
+              <td><b>218.308</b></td>
+              <td>7.501</td>
+              <td><b>7.831</b></td>
+              <td>1.434</td>
             </tr>
             <tr>
-              <td>DreamTalk</td>
-              <td>A+V</td>
-              <td>29.37 / 105.92</td>
-              <td>263.78 / 204.48</td>
-              <td>6.80 / 5.64</td>
-              <td>8.03 / 8.69</td>
-              <td>0.55 / 0.87</td>
+              <td>AniPortrait</td>
+              <td>76.778</td>
+              <td>54.621</td>
+              <td>531.663</td>
+              <td>1.189</td>
+              <td>13.013</td>
+              <td>1.669</td>
             </tr>
-            <tr class="highlight">
+            <tr>
+              <td>AniTalker</td>
+              <td>13.577</td>
+              <td>95.131</td>
+              <td>621.528</td>
+              <td>6.638</td>
+              <td>8.184</td>
+              <td>1.553</td>
+            </tr>
+            <tr style="background-color: #e0f2e0;">
               <td>Ours</td>
-              <td>A+V</td>
-              <td><b>16.09 / 50.84</b></td>
-              <td><b>120.70 / 153.71</b></td>
-              <td><b>8.41 / 6.79</b></td>
-              <td><b>7.11 / 7.58</b></td>
-              <td><b>0.34 / 0.40</b></td>
-            </tr>
-            <tr>
-              <td>Ground Truth</td>
-              <td>A+V</td>
-              <td>-</td>
-              <td>-</td>
-              <td>8.63 / 7.30</td>
-              <td>6.75 / 8.31</td>
-              <td>-</td>
+              <td><b>4.421</b></td>
+              <td><b>46.444</b></td>
+              <td>224.738</td>
+              <td><b>7.672</b></td>
+              <td>8.080</td>
+              <td><b>1.043</b></td>
             </tr>
           </tbody>
         </table>
