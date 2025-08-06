@@ -545,7 +545,50 @@
     </div>
   </section>
   <!-- End video carousel -->
-         
+  
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h3 class="subtitle is-4 custom-subtitle">Effectiveness of Asynchronous Noise Scheduler (ANS)</h3>
+        <div class="video-container">
+          <!-- 第一个位置改为图片 -->
+          <div class="video-item scaled-video">
+            <figure class="image">
+              <img src="static/images/ref_512_new4.png" alt="Reference Image for ANS Comparison">
+              <figcaption class="video-figcaption">
+                Reference Image
+              </figcaption>
+            </figure>
+          </div>
+          <!-- 第二个位置保持视频（无ANS） -->
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video5a_unique" preload="auto" controls>
+                <source src="static/videos/woANS.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Without ANS (Temporal Inconsistency)
+              </figcaption>
+            </figure>
+          </div>
+          <!-- 第三个位置保持视频（有ANS） -->
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video6a_unique" preload="auto" controls>
+                <source src="static/videos/ANS.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                With ANS (Temporal Consistency)
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   <!-- Long-term Generation 部分 -->
   <section class="hero is-small">
     <div class="hero-body">
