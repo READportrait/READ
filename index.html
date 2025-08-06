@@ -248,6 +248,18 @@
     .emotion-control-container {
       gap: 30px; /* 增加视频之间的间距 */
     }
+    .container.is-max-desktop {
+      max-width: 1440px; /* 默认为1200px左右，根据需要增大 */
+      width: 90%; /* 可以设置为百分比，让宽度更灵活 */
+    }
+    
+    /* 对于表格等元素，可以单独调整以适应更大的宽度 */
+    table {
+      width: 100%; /* 保持表格占满容器宽度 */
+      max-width: 1600px; /* 给表格设置更大的最大宽度 */
+      margin-left: auto;
+      margin-right: auto; /* 居中表格 */
+    }
   </style>
 </head>
 <body>
