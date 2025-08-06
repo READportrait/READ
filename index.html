@@ -2,19 +2,24 @@
 <html>
 <head>
   <meta charset="utf-8">
-      <meta name="description" content="DESCRIPTION META TAG">
+  <!-- Meta tags for social media banners, these should be filled in appropriately as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
   <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
   <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
-    <meta property="og:image" content="static/image/your_banner_image.png" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
   <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
-    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>READ: Real-time and Efficient Asynchronous Diffusion for Audio-driven Talking Head Generation</title>
@@ -36,16 +41,6 @@
   <script src="static/js/index.js"></script>
   
   <style>
-    /* START: Font Differentiation */
-    .publication-title {
-        font-family: 'Castoro', serif; /* Distinctive serif font for the main title */
-    }
-
-    .title.is-3, .custom-subtitle, .main-title {
-        font-family: 'Google Sans', sans-serif; /* Modern sans-serif font for section headers and subtitles */
-    }
-    /* END: Font Differentiation */
-
     /* 图片轮播样式 */
     figure.image {
       margin-bottom: 20px; /* 控制整个figure的下方间距 */
@@ -264,7 +259,8 @@
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">READ: Real-time and Efficient Asynchronous Diffusion for Audio-driven Talking Head Generation</h1>
             <div class="is-size-5 publication-authors">
-                            <span class="author-block">Haotian Wang<sup>1</sup>,</span>
+              <!-- Paper authors -->
+              <span class="author-block">Haotian Wang<sup>1</sup>,</span>
               <span class="author-block">Yuzhe Weng<sup>1</sup>,</span>
               <span class="author-block">Jun Du<sup>1</sup>,</span>
               <span class="author-block">Haoran Xu<sup>2</sup>,</span>
@@ -282,7 +278,8 @@
 
             <div class="column has-text-centered">
               <div class="publication-links">
-                                <span class="link-block">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
                   <a href="https://arxiv.org/pdf/YOUR_REPO_HERE" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -292,7 +289,8 @@
                   </a>
                 </span>
 
-                                <span class="link-block">
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
                   <a href="https://arxiv.org/pdf/YOUR_REPO_HERE" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -302,7 +300,8 @@
                   </a>
                 </span>
 
-                                <span class="link-block">
+                <!-- Github link -->
+                <span class="link-block">
                   <a href="https://github.com/YOUR_REPO_HERE" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -312,7 +311,8 @@
                   </a>
                 </span>
 
-                                <span class="link-block">
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
                   <a href="https://arxiv.org/abs/YOUR_REPO_HERE" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -329,7 +329,8 @@
     </div>
   </section>
 
-    <section class="section hero is-light">
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
@@ -344,7 +345,8 @@
     </div>
   </section>
 
-    <section class="section hero is-light">
+  <!-- Paper method -->
+  <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
@@ -364,16 +366,21 @@
       </div>
     </div>
   </section>
-      
-    <section class="hero is-small">
+  <!-- End paper method -->
+    
+  <!-- 视频展示部分1 -->
+  <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
-                <h2 class="title is-3 has-text-centered main-title">Real-time Audio-Driven Talking Head Generation</h2>
-                <h3 class="subtitle is-4 has-text-centered"> </h3>
+        <!-- 居中的主标题 -->
+        <h2 class="title is-3 has-text-centered main-title">Real-time Audio-Driven Talking Head Generation</h2>
+        <!-- 子标题，字体更小，居中对齐，并加粗 -->
+        <h3 class="subtitle is-4 has-text-centered"> </h3>
         <h3 class="subtitle is-4 custom-subtitle">Expressive Talking Head Generation</h3>
         <div class="video-container">
           <div class="video-item scaled-video">
-                        <figure>
+            <!-- 仅在下方显示图注 -->
+            <figure>
               <video poster="" id="video1a_unique" preload="auto" controls>
                 <source src="static/videos/caiqian_shouting.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -396,7 +403,427 @@
           </div>
           <div class="video-item scaled-video">
             <figure>
-      _BUNCH_OF_CODE_TRUNCATED_
+              <video poster="" id="video3a_unique" preload="auto" controls>
+                <source src="static/videos/dianying.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Vocal Source: TED Speech, Female, Talking
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 结束 视频展示部分1 -->
+
+  <!-- 视频展示部分2 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <!-- 子标题，字体更小，居中对齐，并加粗 -->
+        <h3 class="subtitle is-4 custom-subtitle">Multiple Styles Generation</h3>
+        <div class="video-container">
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video4a_unique" preload="auto" controls>
+                <source src="static/videos/caiqian_shouting.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Shouting: TED Speech
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video5a_unique" preload="auto" controls>
+                <source src="static/videos/caiqian_speaking.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speaking: TED Speech
+              </figcaption>
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video6a_unique" preload="auto" controls>
+                <source src="static/videos/caiqian_talking.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Talking: Talk on Higher Education
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 结束 视频展示部分2 -->
+  
+  <!-- 轮播视频*4 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h3 class="subtitle is-4 custom-subtitle">Cross Actors Generation</h3>
+        <div id="results-carousel1" class="carousel results-carousel">
+          <div class="item item-video1">
+            <figure>
+              <video poster="" id="video7a_unique" preload="auto" controls>
+                <source src="static/videos/male_obama.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: Speech on graduation ceremony, Barack Hussein Obama
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item item-video2">
+            <figure>
+              <video poster="" id="video8a_unique" preload="auto" controls>
+                <source src="static/videos/male_xingfu.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Talk: The Pursuit of Happyness, Chris Gardner (Willard Carroll Smith Jr.)
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item item-video3">
+            <figure>
+              <video poster="" id="video9a_unique" preload="auto" controls>
+                <source src="static/videos/male_ted.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: TED Speech on AI Technology
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item item-video4">
+            <figure>
+              <video poster="" id="video10a_unique" preload="auto" controls>
+                <source src="static/videos/female_obama.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Talk: Talk on Higher Education
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item item-video5">
+            <figure>
+              <video poster="" id="video10ai_unique" preload="auto" controls>
+                <source src="static/videos/female_obama1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Talk: Talk on Higher Education
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+  <!-- Long-term Generation 部分 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h3 class="subtitle is-4 custom-subtitle">Long-term Generation Performance</h3>
+        <div class="video-container emotion-control-container">
+          <div class="video-item-2 scaled-video-2">
+            <!-- 仅在上方显示图注 -->
+            <div class="video-prompt">
+              Long-time Generation Results
+            </div>
+            <figure>
+              <video poster="" id="video13ai_unique" preload="auto" controls>
+                <source src="static/videos/man_long1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+          <div class="video-item-2 scaled-video-2">
+            <div class="video-prompt">
+              Long-time Generation Results
+            </div>
+            <figure>
+              <video poster="" id="video14ai_unique" preload="auto" controls>
+                <source src="static/videos/man_long2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 结束 Long-term Generation 部分 -->
+  
+  <!-- 不同语言 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h3 class="subtitle is-4 custom-subtitle">Different Languages Performance (e.g. Chinese, French, and Portuguese)</h3>
+        <div class="video-container">
+          <div class="video-item scaled-video">
+            <!-- 仅在下方显示图注 -->
+            <figure>
+              <video poster="" id="video13a_unique" preload="auto" controls>
+                <source src="static/videos/female_chinese.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <figcaption class="video-figcaption">
+                Vocal Source: Chinese, Talk
+              </figcaption> -->
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video14a_unique" preload="auto" controls>
+                <source src="static/videos/female_france.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <figcaption class="video-figcaption">
+                Vocal Source: French, Speech
+              </figcaption> -->
+            </figure>
+          </div>
+          <div class="video-item scaled-video">
+            <figure>
+              <video poster="" id="video15a_unique" preload="auto" controls>
+                <source src="static/videos/female_portuguese.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <figcaption class="video-figcaption">
+                Vocal Source: Portuguese, Speech
+              </figcaption> -->
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 结束 不同语言 -->
+  
+ <!-- Comparison with SOTA Methods-->
+ <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered main-title">Comparison with SOTA Methods</h2>
+        <h3 class="subtitle is-4"> &nbsp</h3>
+        <h3 class="subtitle is-4 custom-subtitle">Overall Comparison</h3>
+        <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; text-align: center; font-family: sans-serif;">
+          <thead>
+            <tr style="background-color: #f2f2f2;">
+              <th style="vertical-align: middle;">Dataset</th>
+              <th>Method</th>
+              <th>Runtime(s)</th>
+              <th>FID (↓)</th>
+              <th>FVD (↓)</th>
+              <th>Sync-C (↑)</th>
+              <th>Sync-D (↓)</th>
+              <th>E-FID (↓)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- HDTF Dataset -->
+            <tr>
+              <td rowspan="6" style="vertical-align: middle;">HDTF</td>
+              <td>Hallo</td>
+              <td>212.002</td>
+              <td>15.929</td>
+              <td>315.904</td>
+              <td>6.995</td>
+              <td>7.819</td>
+              <td>0.931</td>
+            </tr>
+            <tr>
+              <td>EchoMimic</td>
+              <td>124.105</td>
+              <td>18.384</td>
+              <td>557.809</td>
+              <td>5.852</td>
+              <td>9.052</td>
+              <td><b>0.927</b></td>
+            </tr>
+            <tr>
+              <td>Sonic</td>
+              <td>83.584</td>
+              <td>16.894</td>
+              <td>245.416</td>
+              <td>8.525</td>
+              <td><b>6.576</b></td>
+              <td>0.932</td>
+            </tr>
+            <tr>
+              <td>AniPortrait</td>
+              <td>76.778</td>
+              <td>17.603</td>
+              <td>503.622</td>
+              <td>3.555</td>
+              <td>10.830</td>
+              <td>2.323</td>
+            </tr>
+            <tr>
+              <td>AniTalker</td>
+              <td>13.577</td>
+              <td>39.155</td>
+              <td>514.388</td>
+              <td>5.838</td>
+              <td>8.736</td>
+              <td>1.523</td>
+            </tr>
+            <tr style="background-color: #e0f2e0;">
+              <td>Ours</td>
+              <td><b>4.421</b></td>
+              <td><b>15.073</b></td>
+              <td><b>235.319</b></td>
+              <td><b>8.658</b></td>
+              <td>6.890</td>
+              <td>0.955</td>
+            </tr>
+            
+            <!-- MEAD Dataset -->
+            <tr>
+              <td rowspan="6" style="vertical-align: middle;">MEAD</td>
+              <td>Hallo</td>
+              <td>212.002</td>
+              <td>52.300</td>
+              <td>292.983</td>
+              <td>6.014</td>
+              <td>8.822</td>
+              <td>1.171</td>
+            </tr>
+            <tr>
+              <td>EchoMimic</td>
+              <td>124.105</td>
+              <td>65.771</td>
+              <td>667.999</td>
+              <td>5.482</td>
+              <td>9.128</td>
+              <td>1.448</td>
+            </tr>
+            <tr>
+              <td>Sonic</td>
+              <td>83.854</td>
+              <td>47.070</td>
+              <td><b>218.308</b></td>
+              <td>7.501</td>
+              <td><b>7.831</b></td>
+              <td>1.434</td>
+            </tr>
+            <tr>
+              <td>AniPortrait</td>
+              <td>76.778</td>
+              <td>54.621</td>
+              <td>531.663</td>
+              <td>1.189</td>
+              <td>13.013</td>
+              <td>1.669</td>
+            </tr>
+            <tr>
+              <td>AniTalker</td>
+              <td>13.577</td>
+              <td>95.131</td>
+              <td>621.528</td>
+              <td>6.638</td>
+              <td>8.184</td>
+              <td>1.553</td>
+            </tr>
+            <tr style="background-color: #e0f2e0;">
+              <td>Ours</td>
+              <td><b>4.421</b></td>
+              <td><b>46.444</b></td>
+              <td>224.738</td>
+              <td><b>7.672</b></td>
+              <td>8.080</td>
+              <td><b>1.043</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <!-- 结束 Overall comparison -->
+
+  <!-- 轮播视频*2 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h3 class="subtitle is-4 custom-subtitle">Case Study on Audio-Driven Generation</h3>
+        <div id="results-carousel1" class="carousel results-carousel">
+          <div class="item item-video1add">
+            <figure>
+              <video poster="" id="video19a_add" controls>
+                <source src="static/videos/male_comparison.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Voice Source: HDTF Dataset
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item item-video1">
+            <figure>
+              <video poster="" id="video19a_unique" preload="auto" controls>
+                <source src="static/videos/female_comparison.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Voice Source: HDTF Dataset
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 更新后的 JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 如果不再使用播放按钮，以下 JavaScript 可以移除或注释掉
+      /*
+      // 获取所有播放按钮
+      const playButtons = document.querySelectorAll('.play-button');
+
+      playButtons.forEach(button => {
+          const videoId = button.getAttribute('data-video');
+          const video = document.getElementById(videoId);
+
+          // 点击按钮播放或暂停视频
+          button.addEventListener('click', function () {
+              if (video.paused) {
+                  video.play();
+                  this.textContent = '暂停播放';
+              } else {
+                  video.pause();
                   this.textContent = '开始播放';
               }
           });
@@ -422,6 +849,11 @@
       });
     });
   </script>
-      
-      </body>
+  <!-- Statcounter tracking code -->
+    
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+</body>
 </html>
