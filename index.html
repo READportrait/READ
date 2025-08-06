@@ -370,10 +370,11 @@
           <div class="content has-text-justified">
             <figure class="image">
               <img src="static/images/overall.png" alt="Method Image">
-              <figcaption class="video-figcaption">
+              <figcaption class="video-figcaption" style="width: 100%;">
                 Figure 1: The framework of READ. During training, we first pre-train the SpeechAE for speech feature temporal compression, shown in (b). Then we train the total framework using the asynchronous forward process, shown in (c). During inference, we conduct the asynchronous motion-guided reverse process by ANS, also shown in (c).
               </figcaption>
             </figure>
+            
             <p>
               In this research, we introduce READ, the first real-time diffusion-transformer-based talking head generation framework. Our framework incorporates a pre-trained temporal VAE with a high spatiotemporal compression ratio of 32×32×8 pixels per token. To achieve better audio-visual alignment in the compressed latent space, we pre-train a Speech Autoencoder (SpeechAE) by self-supervising to generate temporally compressed speech latent codes that preserve essential acoustic information corresponding to the compressed video latent space. Then, an Audio-to-Video Diffusion Transformer (A2V-DiT) is designed to generate video latents under speech latent conditions efficiently. The whole training and inference process of our framework is under the proposed Asynchronous Noise Scheduler (ANS), which implements an asynchronous add-noise forward process and an asynchronous motion-guided reverse process to effectively generate long-time videos.
             </p>
