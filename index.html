@@ -379,7 +379,6 @@
         <h3 class="subtitle is-4 custom-subtitle">Expressive Talking Head Generation</h3>
         <div class="video-container">
           <div class="video-item scaled-video">
-            <!-- 仅在下方显示图注 -->
             <figure>
               <video poster="" id="video1a_unique" preload="auto" controls>
                 <source src="static/videos/caiqian_shouting.mp4" type="video/mp4">
@@ -538,17 +537,15 @@
         <h3 class="subtitle is-4 custom-subtitle">Long-time Generation Performance</h3>
         <div class="video-container emotion-control-container">
           <div class="video-item-2 scaled-video-2">
-            <!-- 图注将在下方显示 -->
             <figure>
               <video poster="" id="video13ai_unique" preload="auto" controls>
                 <source src="static/videos/man_long1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+              <figcaption class="video-figcaption">
+                Long-time Generation Results
+              </figcaption>
             </figure>
-            <!-- 图注容器移到视频下方 -->
-            <div class="video-figcaption">
-              Long-time Generation Results
-            </div>
           </div>
           <div class="video-item-2 scaled-video-2">
             <figure>
@@ -556,11 +553,10 @@
                 <source src="static/videos/man_long2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+              <figcaption class="video-figcaption">
+                Long-time Generation Results
+              </figcaption>
             </figure>
-            <!-- 图注容器移到视频下方 -->
-            <div class="video-prompt">
-              Long-time Generation Results
-            </div>
           </div>
         </div>
       </div>
@@ -575,15 +571,14 @@
         <h3 class="subtitle is-4 custom-subtitle">Different Languages Performance (e.g. Chinese, French, and Portuguese)</h3>
         <div class="video-container">
           <div class="video-item scaled-video">
-            <!-- 仅在下方显示图注 -->
             <figure>
               <video poster="" id="video13a_unique" preload="auto" controls>
                 <source src="static/videos/female_chinese.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <!-- <figcaption class="video-figcaption">
+              <figcaption class="video-figcaption">
                 Vocal Source: Chinese, Talk
-              </figcaption> -->
+              </figcaption>
             </figure>
           </div>
           <div class="video-item scaled-video">
@@ -592,9 +587,9 @@
                 <source src="static/videos/female_france.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <!-- <figcaption class="video-figcaption">
+              <figcaption class="video-figcaption">
                 Vocal Source: French, Speech
-              </figcaption> -->
+              </figcaption>
             </figure>
           </div>
           <div class="video-item scaled-video">
@@ -603,9 +598,9 @@
                 <source src="static/videos/female_portuguese.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <!-- <figcaption class="video-figcaption">
+              <figcaption class="video-figcaption">
                 Vocal Source: Portuguese, Speech
-              </figcaption> -->
+              </figcaption>
             </figure>
           </div>
         </div>
@@ -796,7 +791,7 @@
           <div class="content">
 
             <p>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
               You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
               Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
@@ -807,37 +802,9 @@
     </div>
   </footer>
 
-  <!-- 更新后的 JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // 如果不再使用播放按钮，以下 JavaScript 可以移除或注释掉
-      /*
-      // 获取所有播放按钮
-      const playButtons = document.querySelectorAll('.play-button');
-
-      playButtons.forEach(button => {
-          const videoId = button.getAttribute('data-video');
-          const video = document.getElementById(videoId);
-
-          // 点击按钮播放或暂停视频
-          button.addEventListener('click', function () {
-              if (video.paused) {
-                  video.play();
-                  this.textContent = '暂停播放';
-              } else {
-                  video.pause();
-                  this.textContent = '开始播放';
-              }
-          });
-
-          // 当视频播放结束时，更新按钮文本
-          video.addEventListener('ended', function () {
-              button.textContent = '开始播放';
-          });
-      });
-      */
-
-      // 新增功能：当一个视频开始播放时，暂停所有其他视频
+      // 当一个视频开始播放时，暂停所有其他视频
       const videos = document.querySelectorAll('video');
 
       videos.forEach((video) => {
@@ -851,11 +818,6 @@
       });
     });
   </script>
-  <!-- Statcounter tracking code -->
-    
-  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
 
 </body>
 </html>
