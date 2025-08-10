@@ -483,242 +483,68 @@
   <!-- 轮播视频*4 -->
   <section class="hero is-small">
     <div class="hero-body">
-        <div class="container">
-            <h3 class="subtitle is-4 custom-subtitle">Cross Actors Generation</h3>
-            <div id="results-carousel1" class="carousel results-carousel">
-                <!-- 轮播控制按钮 -->
-                <button class="carousel-control prev" aria-label="上一个视频">❮</button>
-                <button class="carousel-control next" aria-label="下一个视频">❯</button>
-                
-                <div class="carousel-container">
-                    <div class="item item-video1 active">
-                        <figure>
-                            <video poster="" id="video7a_unique" preload="auto" controls>
-                                <source src="static/videos/male_obama.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <figcaption class="video-figcaption">
-                                Speech: Speech on graduation ceremony, Barack Hussein Obama
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="item item-video2">
-                        <figure>
-                            <video poster="" id="video8a_unique" preload="auto" controls>
-                                <source src="static/videos/male_xingfu.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <figcaption class="video-figcaption">
-                                Talk: The Pursuit of Happyness, Chris Gardner (Willard Carroll Smith Jr.)
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="item item-video3">
-                        <figure>
-                            <video poster="" id="video9a_unique" preload="auto" controls>
-                                <source src="static/videos/male_ted.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <figcaption class="video-figcaption">
-                                Speech: TED Speech on AI Technology
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="item item-video4">
-                        <figure>
-                            <video poster="" id="video10a_unique" preload="auto" controls>
-                                <source src="static/videos/female_obama.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <figcaption class="video-figcaption">
-                                Talk: Talk on Higher Education
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="item item-video5">
-                        <figure>
-                            <video poster="" id="video10ai_unique" preload="auto" controls>
-                                <source src="static/videos/female_obama1.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <figcaption class="video-figcaption">
-                                Talk: Talk on Higher Education
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-                
-                <!-- 轮播指示器 -->
-                <div class="carousel-indicators"></div>
-            </div>
+      <div class="container">
+        <h3 class="subtitle is-4 custom-subtitle">Cross Actors Generation</h3>
+        <div id="results-carousel1" class="carousel results-carousel">
+          <div class="item item-video1">
+            <figure>
+              <video poster="" id="video7a_unique" preload="auto" controls>
+                <source src="static/videos/male_obama.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: Speech on graduation ceremony, Barack Hussein Obama
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item item-video2">
+            <figure>
+              <video poster="" id="video8a_unique" preload="auto" controls>
+                <source src="static/videos/male_xingfu.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Talk: The Pursuit of Happyness, Chris Gardner (Willard Carroll Smith Jr.)
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item item-video3">
+            <figure>
+              <video poster="" id="video9a_unique" preload="auto" controls>
+                <source src="static/videos/male_ted.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Speech: TED Speech on AI Technology
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item item-video4">
+            <figure>
+              <video poster="" id="video10a_unique" preload="auto" controls>
+                <source src="static/videos/female_obama.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Talk: Talk on Higher Education
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item item-video5">
+            <figure>
+              <video poster="" id="video10ai_unique" preload="auto" controls>
+                <source src="static/videos/female_obama1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="video-figcaption">
+                Talk: Talk on Higher Education
+              </figcaption>
+            </figure>
+          </div>
         </div>
+      </div>
     </div>
-</section>
-
-<style>
-.results-carousel {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.carousel-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.item {
-    min-width: 100%;
-    display: none;
-}
-
-.item.active {
-    display: block;
-}
-
-/* 控制按钮样式 */
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 10;
-    font-size: 1.5rem;
-    border-radius: 50%;
-    transition: background 0.3s;
-}
-
-.carousel-control.prev {
-    left: 10px;
-}
-
-.carousel-control.next {
-    right: 10px;
-}
-
-.carousel-control:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-/* 指示器样式 */
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    gap: 8px;
-}
-
-.indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #ccc;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.indicator.active {
-    background: #333;
-}
-
-video {
-    width: 100%;
-    max-width: 800px;
-    display: block;
-    margin: 0 auto;
-}
-
-.video-figcaption {
-    text-align: center;
-    margin-top: 8px;
-    font-style: italic;
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.getElementById('results-carousel1');
-    const items = carousel.querySelectorAll('.item');
-    const prevBtn = carousel.querySelector('.prev');
-    const nextBtn = carousel.querySelector('.next');
-    const indicatorsContainer = carousel.querySelector('.carousel-indicators');
-    let currentIndex = 0;
-    let isTransitioning = false;
-    
-    // 创建指示器
-    items.forEach((_, index) => {
-        const indicator = document.createElement('button');
-        indicator.className = `indicator ${index === currentIndex ? 'active' : ''}`;
-        indicator.setAttribute('aria-label', `切换到第 ${index + 1} 个视频`);
-        indicator.addEventListener('click', () => goToSlide(index));
-        indicatorsContainer.appendChild(indicator);
-    });
-    const indicators = carousel.querySelectorAll('.indicator');
-    
-    // 获取当前视频元素
-    function getCurrentVideo() {
-        return items[currentIndex].querySelector('video');
-    }
-    
-    // 切换到指定幻灯片
-    function goToSlide(index) {
-        if (isTransitioning || index === currentIndex) return;
-        
-        isTransitioning = true;
-        
-        // 暂停当前视频
-        const currentVideo = getCurrentVideo();
-        currentVideo.pause();
-        
-        // 更新激活状态
-        items[currentIndex].classList.remove('active');
-        indicators[currentIndex].classList.remove('active');
-        
-        currentIndex = index;
-        
-        items[currentIndex].classList.add('active');
-        indicators[currentIndex].classList.add('active');
-        
-        // 重置过渡状态
-        setTimeout(() => {
-            isTransitioning = false;
-        }, 500);
-    }
-    
-    // 下一个幻灯片
-    function nextSlide() {
-        const nextIndex = (currentIndex + 1) % items.length;
-        goToSlide(nextIndex);
-    }
-    
-    // 上一个幻灯片
-    function prevSlide() {
-        const prevIndex = (currentIndex - 1 + items.length) % items.length;
-        goToSlide(prevIndex);
-    }
-    
-    // 为所有视频添加播放完成事件监听
-    items.forEach(item => {
-        const video = item.querySelector('video');
-        video.addEventListener('ended', nextSlide);
-    });
-    
-    // 按钮事件监听
-    prevBtn.addEventListener('click', prevSlide);
-    nextBtn.addEventListener('click', nextSlide);
-    
-    // 键盘导航
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight') nextSlide();
-        if (e.key === 'ArrowLeft') prevSlide();
-    });
-});
-</script>
+  </section>
   <!-- End video carousel -->
   
   <section class="hero is-small">
@@ -989,7 +815,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="hero-body">
       <div class="container">
         <h3 class="subtitle is-4 custom-subtitle">Case Study on Audio-Driven Generation</h3>
-        <div id="results-carousel2" class="carousel results-carousel">
+        <div id="results-carousel1" class="carousel results-carousel">
           <div class="item item-video1add">
             <figure>
               <video poster="" id="video19a_add" controls>
@@ -1038,18 +864,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // 禁用轮播自动播放和自动换页
-      const carousels = document.querySelectorAll('.carousel');
-      carousels.forEach(carousel => {
-        // 初始化轮播并禁用自动播放
-        new BulmaCarousel(carousel, {
-          autoplay: false,  // 禁用自动播放
-          interval: 0       // 禁用自动换页（0表示无间隔）
-        });
-      });
-
-      // 视频播放控制：同一时间只播放一个视频
+      // 当一个视频开始播放时，暂停所有其他视频
       const videos = document.querySelectorAll('video');
+
       videos.forEach((video) => {
           video.addEventListener('play', () => {
               videos.forEach((vid) => {
