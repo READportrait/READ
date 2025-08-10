@@ -2,23 +2,20 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriately as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
+  <!-- 保留原meta标签 -->
   <meta name="description" content="DESCRIPTION META TAG">
   <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
   <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
   <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X600-->
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
+  
   <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -41,102 +38,96 @@
   <script src="static/js/index.js"></script>
   
   <style>
-    /* 图片轮播样式 */
+    /* 保留原样式代码 */
     figure.image {
-      margin-bottom: 20px; /* 控制整个figure的下方间距 */
-      text-align: center; /* 居中对齐内容 */
+      margin-bottom: 20px;
+      text-align: center;
     }
 
     figure.image img {
-      max-width: 100%; /* 确保图片不超出容器宽度 */
+      max-width: 100%;
       height: auto;
       display: block;
-      margin: 0 auto 10px auto; /* 居中图片并添加下方间距 */
+      margin: 0 auto 10px auto;
     }
 
     figure.image figcaption {
-      font-size: 1.1em; /* 增大图注字体 */
+      font-size: 1.1em;
       color: #6c757d;
-      text-align: center; /* 居中图注 */
-      margin-top: 8px; /* 图注与图片之间的间距 */
+      text-align: center;
+      margin-top: 8px;
       width: 80%;
       margin-left: auto;
       margin-right: auto;
     }
 
-    /* 自定义子标题样式 */
     .custom-subtitle {
-      font-weight: 600; /* 适当加粗 */
-      color: #4a4a4a; /* 可选：自定义颜色 */
-      margin-top: 20px; /* 增加h2和h3之间的间距 */
+      font-weight: 600;
+      color: #4a4a4a;
+      margin-top: 20px;
     }
 
-    /* 在子标题前添加圆点 */
     .custom-subtitle::before {
-      content: "• "; /* 添加圆点和一个空格 */
-      color: #000; /* 圆点颜色，可根据需要调整 */
-      font-weight: inherit; /* 继承父元素的字体粗细 */
+      content: "• ";
+      color: #000;
+      font-weight: inherit;
     }
 
     .main-title {
-      margin-bottom: 0.5rem; /* 调整数值以实现所需的间距 */
+      margin-bottom: 0.5rem;
     }
 
     .video-container {
       display: flex;
-      justify-content: center; /* 居中所有视频 */
-      gap: 1px; /* 将视频之间的间隔从10px增大到20px */
-      flex-wrap: wrap; /* 在小屏幕上允许换行 */
-      padding: 1px; /* 将内边距从5px增大到10px */
+      justify-content: center;
+      gap: 1px;
+      flex-wrap: wrap;
+      padding: 1px;
     }
 
-    /* 视频项样式 */
     .video-item {
-      flex: 0 1 30%; /* 默认每行显示三个视频 */
+      flex: 0 1 30%;
       display: flex;
-      flex-direction: column; /* 垂直排列视频和图注 */
-      align-items: center; /* 居中视频和图注 */
-      margin-bottom: 1px; /* 将下方间距从10px增大到20px */
-      transition: transform 0.3s; /* 平滑缩放过渡 */
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1px;
+      transition: transform 0.3s;
     }
 
     .video-item-2 {
-      flex: 0 1 40%; /* 默认每行显示三个视频 */
+      flex: 0 1 40%;
       display: flex;
-      flex-direction: column; /* 垂直排列视频和图注 */
-      align-items: center; /* 居中视频和图注 */
-      margin-bottom: 100px; /* 将下方间距从10px增大到20px */
-      transition: transform 0.3s; /* 平滑缩放过渡 */
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 100px;
+      transition: transform 0.3s;
     }
 
-    /* 缩放视频项 */
     .scaled-video {
-      transform: scale(0.8); /* 缩放至80% */
-      transform-origin: center; /* 从中心缩放 */
+      transform: scale(0.8);
+      transform-origin: center;
     }
     
     .scaled-video-2 {
-      transform: scale(0.7); /* 缩放至70% */
-      transform-origin: center; /* 从中心缩放 */
+      transform: scale(0.7);
+      transform-origin: center;
     }
 
-    /* 视频样式 */
     .video-item video,
     .video-item-2 video {
-      width: 100%; /* 视频宽度保持为容器的100% */
-      height: auto; /* 保持视频的纵横比 */
+      width: 100%;
+      height: auto;
       align-items: center;
       display: block;
-      border-radius: 8px; /* 可选：为视频添加圆角 */
+      border-radius: 8px;
     }
 
-    /* 图注样式 */
     .video-figcaption {
-      font-size: 1.1em; /* 增大图注字体 */
+      font-size: 1.1em;
       color: #6c757d;
-      text-align: center; /* 居中图注 */
-      margin-top: 8px; /* 图注与视频之间的间距保持为8px */
-      width: 100%; /* 确保图注宽度与视频一致 */
+      text-align: center;
+      margin-top: 8px;
+      width: 100%;
       margin-left: auto;
       margin-right: auto;
     }
@@ -145,28 +136,27 @@
       font-size: 1.4em;
       font-weight: bold;
       margin-bottom: 0.5em;
-      color: #333; /* 主提示文本颜色 */
-      text-align: center; /* 居中提示文本 */
-      width: 100%; /* 与视频宽度一致 */
-      margin: 0 auto 0.5em auto; /* 居中提示并添加下方间距 */
+      color: #333;
+      text-align: center;
+      width: 100%;
+      margin: 0 auto 0.5em auto;
     }
 
-    /* 轮播视频样式 */
     .carousel .item figure {
-      text-align: center; /* 居中视频和图注 */
-      margin: 0; /* 移除默认的margin */
+      text-align: center;
+      margin: 0;
     }
 
     .carousel .item video {
-      width: 100%; /* 视频宽度保持为容器的100% */
-      height: auto; /* 保持视频的纵横比 */
+      width: 100%;
+      height: auto;
       align-items: center;
       display: block;
-      border-radius: 8px; /* 可选：为视频添加圆角 */
+      border-radius: 8px;
     }
 
     .carousel .video-figcaption {
-      font-size: 1.1em; /* 增大图注字体 */
+      font-size: 1.1em;
       color: #6c757d;
       text-align: center;
       margin-top: 8px;
@@ -179,18 +169,14 @@
       border-collapse: collapse;
       width: 100%;
       font-family: Arial, sans-serif;
-      text-align: center; /* 确保表格文字水平居中 */
+      text-align: center;
     }
     th, td {
       border: 1px solid #ccc;
       padding: 8px;
-      /* 移除 Flexbox 属性 */
-      /* display: flex; */
-      /* justify-content: center; */
-      /* align-items: center; */
-      text-align: center; /* 水平居中 */
-      vertical-align: middle; /* 垂直居中 */
-      font-size: 1em; /* 确保表格文字清晰 */
+      text-align: center;
+      vertical-align: middle;
+      font-size: 1em;
     }
     th {
       background-color: #f4f4f4;
@@ -199,20 +185,20 @@
       background-color: #f9f9f9;
     }
     .highlight {
-      background-color: #e7f6e7; /* Light green for emphasis */
+      background-color: #e7f6e7;
       font-weight: bold;
     }
     .prompt-text {
-      font-style: italic; /* 斜体 */
-      font-weight: bold;  /* 加粗 */
-      color: #6495ED;     /* 设置文字颜色，可以换成你想要的颜色 */
+      font-style: italic;
+      font-weight: bold;
+      color: #6495ED;
     }
 
 
     @media (max-width: 1024px) {
       .video-item,
       .video-item-2 {
-        flex: 0 1 45%; /* 中等屏幕上每行显示两个视频 */
+        flex: 0 1 45%;
       }
       
       .video-item video,
@@ -220,14 +206,14 @@
       .video-item figcaption,
       .video-item-2 figcaption,
       .video-prompt {
-        width: 100%; /* 在中等屏幕上适当调整宽度 */
+        width: 100%;
       }
     }
 
     @media (max-width: 600px) {
       .video-item,
       .video-item-2 {
-        flex: 0 1 100%; /* 小屏幕上每行显示一个视频 */
+        flex: 0 1 100%;
       }
 
       .video-item video,
@@ -235,30 +221,50 @@
       .video-item figcaption,
       .video-item-2 figcaption,
       .video-prompt {
-        width: 100%; /* 在小屏幕上视频占满容器宽度 */
+        width: 100%;
       }
 
       .video-container {
-        gap: 10px; /* 将小屏幕上的间隔从5px增大到10px */
-        padding: 10px; /* 保持内边距为10px */
+        gap: 10px;
+        padding: 10px;
       }
     }
 
-    /* 专门为 Image-source/Text-source Emotion Control 部分增加的样式 */
     .emotion-control-container {
-      gap: 30px; /* 增加视频之间的间距 */
+      gap: 30px;
     }
     .container.is-max-desktop {
-      max-width: 1300px; /* 默认为1200px左右，根据需要增大 */
-      width: 90%; /* 可以设置为百分比，让宽度更灵活 */
+      max-width: 1300px;
+      width: 90%;
     }
     
-    /* 对于表格等元素，可以单独调整以适应更大的宽度 */
     table {
-      width: 100%; /* 保持表格占满容器宽度 */
-      max-width: 1600px; /* 给表格设置更大的最大宽度 */
+      width: 100%;
+      max-width: 1600px;
       margin-left: auto;
-      margin-right: auto; /* 居中表格 */
+      margin-right: auto;
+    }
+
+    /* 轮播控制按钮样式 */
+    .carousel-navigation {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      gap: 10px;
+    }
+    
+    .carousel-control {
+      background: #333;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+    .carousel-control:hover {
+      background: #555;
     }
   </style>
 </head>
@@ -272,7 +278,6 @@
             <h1 class="title is-1 publication-title">READ: Real-time and Efficient Asynchronous Diffusion for Audio-driven Talking Head Generation</h1>
             <h3 class="subtitle is-4"> &nbsp</h3>
             <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
               <span class="author-block">Haotian Wang<sup>1</sup>,</span>
               <span class="author-block">Yuzhe Weng<sup>1</sup>,</span>
               <span class="author-block">Jun Du<sup>1</sup>,</span>
@@ -294,7 +299,6 @@
 
             <div class="column has-text-centered">
               <div class="publication-links">
-                <!-- Arxiv PDF link -->
                 <span class="link-block">
                   <a href="https://arxiv.org/pdf/2508.03457" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
@@ -305,7 +309,6 @@
                   </a>
                 </span>
 
-                <!-- Supplementary PDF link -->
                 <span class="link-block">
                   <a href="https://arxiv.org/pdf/2508.03457" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
@@ -316,7 +319,6 @@
                   </a>
                 </span>
 
-                <!-- Github link -->
                 <span class="link-block">
                   <a href="https://github.com/YOUR_REPO_HERE" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
@@ -327,7 +329,6 @@
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link -->
                 <span class="link-block">
                   <a href="https://arxiv.org/pdf/2508.03457" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
@@ -383,15 +384,12 @@
       </div>
     </div>
   </section>
-  <!-- End paper method -->
 
   <!-- 视频展示部分1 -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
-        <!-- 居中的主标题 -->
         <h2 class="title is-3 has-text-centered main-title">Real-time Audio-Driven Talking Head Generation</h2>
-        <!-- 子标题，字体更小，居中对齐，并加粗 -->
         <h3 class="subtitle is-4 has-text-centered"> &nbsp</h3>
         <h3 class="subtitle is-4 custom-subtitle">Expressive Talking Head Generation</h3>
         <div class="video-container">
@@ -432,13 +430,11 @@
       </div>
     </div>
   </section>
-  <!-- 结束 视频展示部分1 -->
 
   <!-- 视频展示部分2 -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
-        <!-- 子标题，字体更小，居中对齐，并加粗 -->
         <h3 class="subtitle is-4 custom-subtitle">Multiple Styles Generation</h3>
         <div class="video-container">
           <div class="video-item scaled-video">
@@ -478,9 +474,8 @@
       </div>
     </div>
   </section>
-  <!-- 结束 视频展示部分2 -->
   
-  <!-- 轮播视频*4 -->
+  <!-- 轮播视频*4 (修改1：修改ID为唯一) -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
@@ -542,17 +537,20 @@
             </figure>
           </div>
         </div>
+        <!-- 添加轮播控制按钮 -->
+        <div class="carousel-navigation">
+          <button class="carousel-control prev" data-target="results-carousel1">Previous</button>
+          <button class="carousel-control next" data-target="results-carousel1">Next</button>
+        </div>
       </div>
     </div>
   </section>
-  <!-- End video carousel -->
   
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
         <h3 class="subtitle is-4 custom-subtitle">Effectiveness of Asynchronous Noise Scheduler (ANS)</h3>
         <div class="video-container">
-          <!-- 第一个位置改为图片 -->
           <div class="video-item scaled-video">
             <figure class="image">
               <img src="static/videos/ref_512_new4.jpg" alt="Reference Image for ANS Comparison">
@@ -561,7 +559,6 @@
               </figcaption>
             </figure>
           </div>
-          <!-- 第二个位置保持视频（无ANS） -->
           <div class="video-item scaled-video">
             <figure>
               <video poster="" id="video5a_unique" preload="auto" controls>
@@ -573,7 +570,6 @@
               </figcaption>
             </figure>
           </div>
-          <!-- 第三个位置保持视频（有ANS） -->
           <div class="video-item scaled-video">
             <figure>
               <video poster="" id="video6a_unique" preload="auto" controls>
@@ -622,7 +618,6 @@
       </div>
     </div>
   </section>
-  <!-- 结束 Long-term Generation 部分 -->
   
   <!-- 不同语言 -->
   <section class="hero is-small">
@@ -667,7 +662,6 @@
       </div>
     </div>
   </section>
-  <!-- 结束 不同语言 -->
   
  <!-- Comparison with SOTA Methods-->
  <section class="hero is-small">
@@ -690,7 +684,6 @@
             </tr>
           </thead>
           <tbody>
-            <!-- HDTF Dataset -->
             <tr>
               <td rowspan="6" style="vertical-align: middle;">HDTF</td>
               <td>Hallo</td>
@@ -747,7 +740,6 @@
               <td>0.955</td>
             </tr>
             
-            <!-- MEAD Dataset -->
             <tr>
               <td rowspan="6" style="vertical-align: middle;">MEAD</td>
               <td>Hallo</td>
@@ -808,14 +800,13 @@
       </div>
     </div>
   </section>
-  <!-- 结束 Overall comparison -->
 
-  <!-- 轮播视频*2 -->
+  <!-- 轮播视频*2 (修改2：修改ID为唯一) -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
         <h3 class="subtitle is-4 custom-subtitle">Case Study on Audio-Driven Generation</h3>
-        <div id="results-carousel1" class="carousel results-carousel">
+        <div id="results-carousel2" class="carousel results-carousel">
           <div class="item item-video1add">
             <figure>
               <video poster="" id="video19a_add" controls>
@@ -839,10 +830,14 @@
             </figure>
           </div>
         </div>
+        <!-- 添加轮播控制按钮 -->
+        <div class="carousel-navigation">
+          <button class="carousel-control prev" data-target="results-carousel2">Previous</button>
+          <button class="carousel-control next" data-target="results-carousel2">Next</button>
+        </div>
       </div>
     </div>
   </section>
-  <!-- End video carousel -->
   
   <footer class="footer">
     <div class="container">
@@ -866,7 +861,6 @@
     document.addEventListener('DOMContentLoaded', function () {
       // 当一个视频开始播放时，暂停所有其他视频
       const videos = document.querySelectorAll('video');
-
       videos.forEach((video) => {
           video.addEventListener('play', () => {
               videos.forEach((vid) => {
@@ -876,6 +870,56 @@
               });
           });
       });
+
+      // 轮播初始化代码（修改3：添加轮播控制逻辑）
+      function initCarousel(carouselId) {
+        const carousel = document.getElementById(carouselId);
+        if (!carousel) return;
+        
+        // 初始化轮播，禁用自动播放
+        const carouselInstance = new BulmaCarousel(carousel, {
+          autoplay: false,  // 禁用自动播放
+          infinite: true,   // 无限循环
+          slidesToScroll: 1,
+          slidesToShow: 1
+        });
+
+        // 获取当前轮播中的所有视频
+        const carouselVideos = carousel.querySelectorAll('video');
+        
+        // 为每个视频添加播放完成事件，结束后切换到下一个
+        carouselVideos.forEach(video => {
+          video.addEventListener('ended', () => {
+            carouselInstance.next();
+          });
+        });
+
+        // 为前后按钮添加事件
+        const prevBtn = document.querySelector(`.carousel-control.prev[data-target="${carouselId}"]`);
+        const nextBtn = document.querySelector(`.carousel-control.next[data-target="${carouselId}"]`);
+        
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => {
+            // 切换前暂停当前视频
+            const currentVideo = carousel.querySelector('.item.active video');
+            if (currentVideo) currentVideo.pause();
+            carouselInstance.prev();
+          });
+        }
+        
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => {
+            // 切换前暂停当前视频
+            const currentVideo = carousel.querySelector('.item.active video');
+            if (currentVideo) currentVideo.pause();
+            carouselInstance.next();
+          });
+        }
+      }
+
+      // 初始化两个轮播
+      initCarousel('results-carousel1');
+      initCarousel('results-carousel2');
     });
   </script>
 
