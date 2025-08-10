@@ -815,7 +815,7 @@
     <div class="hero-body">
       <div class="container">
         <h3 class="subtitle is-4 custom-subtitle">Case Study on Audio-Driven Generation</h3>
-        <div id="results-carousel1" class="carousel results-carousel">
+        <div id="results-carousel2" class="carousel results-carousel">
           <div class="item item-video1add">
             <figure>
               <video poster="" id="video19a_add" controls>
@@ -864,9 +864,18 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // 当一个视频开始播放时，暂停所有其他视频
-      const videos = document.querySelectorAll('video');
+      // 禁用轮播自动播放和自动换页
+      const carousels = document.querySelectorAll('.carousel');
+      carousels.forEach(carousel => {
+        // 初始化轮播并禁用自动播放
+        new BulmaCarousel(carousel, {
+          autoplay: false,  // 禁用自动播放
+          interval: 0       // 禁用自动换页（0表示无间隔）
+        });
+      });
 
+      // 视频播放控制：同一时间只播放一个视频
+      const videos = document.querySelectorAll('video');
       videos.forEach((video) => {
           video.addEventListener('play', () => {
               videos.forEach((vid) => {
