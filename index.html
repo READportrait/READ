@@ -867,14 +867,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     // 获取所有视频元素
     const videos = document.querySelectorAll('video');
-    // 获取轮播容器
-    const carousel = document.getElementById('results-carousel1');
-    // 轮播定时器
-    let carouselInterval;
-    // 轮播间隔时间（毫秒），可根据需要调整
-    const intervalTime = 5000;
 
-    // 原有功能：一个视频播放时暂停其他视频
+    // 保留原有功能：一个视频播放时暂停其他视频
     videos.forEach((video) => {
         video.addEventListener('play', () => {
             videos.forEach((vid) => {
@@ -882,68 +876,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     vid.pause();
                 }
             });
-            // 视频播放时停止轮播
-            stopCarousel();
         });
     });
 
-    // 视频暂停时检查是否需要恢复轮播
-    videos.forEach(video => {
-        video.addEventListener('pause', checkCarouselStatus);
-        
-        // 视频播放结束时检查轮播状态
-        video.addEventListener('ended', checkCarouselStatus);
-
-        // 全屏状态变化时也检查（避免全屏时轮播干扰）
-        video.addEventListener('fullscreenchange', checkCarouselStatus);
-        video.addEventListener('webkitfullscreenchange', checkCarouselStatus);
-        video.addEventListener('mozfullscreenchange', checkCarouselStatus);
-    });
-
-    // 轮播自动切换函数
-    function startCarousel() {
-        // 清除已有定时器，避免重复触发
-        if (carouselInterval) clearInterval(carouselInterval);
-
-        carouselInterval = setInterval(() => {
-            // 获取当前显示的视频项（根据实际轮播逻辑调整选择器）
-            const currentItem = carousel.querySelector('.item.active') || carousel.querySelector('.item');
-            // 计算下一项（最后一项则循环到第一项）
-            let nextItem = currentItem.nextElementSibling;
-            if (!nextItem) {
-                nextItem = carousel.querySelector('.item:first-child');
-            }
-
-            // 切换显示状态（根据实际轮播实现调整，这里以active类为例）
-            currentItem.classList.remove('active');
-            nextItem.classList.add('active');
-        }, intervalTime);
-    }
-
-    // 停止轮播
-    function stopCarousel() {
-        if (carouselInterval) {
-            clearInterval(carouselInterval);
-            carouselInterval = null;
-        }
-    }
-
-    // 检查是否有视频在播放，决定轮播状态
-    function checkCarouselStatus() {
-        // 判断是否有任何视频处于播放状态
-        const hasPlayingVideo = Array.from(videos).some(video => !video.paused && !video.ended);
-        
-        if (hasPlayingVideo) {
-            // 有视频播放，停止轮播
-            stopCarousel();
-        } else {
-            // 所有视频都暂停/结束，启动轮播
-            startCarousel();
-        }
-    }
-
-    // 初始化轮播
-    startCarousel();
+    // 移除所有自动轮播相关逻辑，轮播不再自动切换
+    // （如需手动切换轮播，需通过额外的按钮或控件实现，此处仅停止自动轮播）
 });
 </script>
 
