@@ -481,71 +481,72 @@
   <!-- 结束 视频展示部分2 -->
   
   <!-- 轮播视频*4 -->
-  <section class="hero is-small">
+<section class="hero is-small">
     <div class="hero-body">
-      <div class="container">
-        <h3 class="subtitle is-4 custom-subtitle">Cross Actors Generation (please hover over the video or go full screen to disable auto-scroll)</h3>
-        <div id="results-carousel1" class="carousel results-carousel">
-          <div class="item item-video1">
-            <figure>
-              <video poster="" id="video7a_unique" preload="auto" controls>
-                <source src="static/videos/male_obama.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <figcaption class="video-figcaption">
-                Speech: Speech on graduation ceremony, Barack Hussein Obama
-              </figcaption>
-            </figure>
-          </div>
-          <div class="item item-video2">
-            <figure>
-              <video poster="" id="video8a_unique" preload="auto" controls>
-                <source src="static/videos/male_xingfu.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <figcaption class="video-figcaption">
-                Talk: The Pursuit of Happyness, Chris Gardner (Willard Carroll Smith Jr.)
-              </figcaption>
-            </figure>
-          </div>
-          <div class="item item-video3">
-            <figure>
-              <video poster="" id="video9a_unique" preload="auto" controls>
-                <source src="static/videos/male_ted.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <figcaption class="video-figcaption">
-                Speech: TED Speech on AI Technology
-              </figcaption>
-            </figure>
-          </div>
-          <div class="item item-video4">
-            <figure>
-              <video poster="" id="video10a_unique" preload="auto" controls>
-                <source src="static/videos/female_obama.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <figcaption class="video-figcaption">
-                Talk: Talk on Higher Education
-              </figcaption>
-            </figure>
-          </div>
-          <div class="item item-video5">
-            <figure>
-              <video poster="" id="video10ai_unique" preload="auto" controls>
-                <source src="static/videos/female_obama1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <figcaption class="video-figcaption">
-                Talk: Talk on Higher Education
-              </figcaption>
-            </figure>
-          </div>
+        <div class="container">
+            <h3 class="subtitle is-4 custom-subtitle">Cross Actors Generation (please hover over the video or go full screen to disable auto-scroll)</h3>
+            <div id="results-carousel1" class="carousel results-carousel">
+                <!-- 视频项保持不变 -->
+                <div class="item item-video1">
+                    <figure>
+                        <video poster="" id="video7a_unique" preload="auto" controls>
+                            <source src="static/videos/male_obama.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption class="video-figcaption">
+                            Speech: Speech on graduation ceremony, Barack Hussein Obama
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="item item-video2">
+                    <figure>
+                        <video poster="" id="video8a_unique" preload="auto" controls>
+                            <source src="static/videos/male_xingfu.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption class="video-figcaption">
+                            Talk: The Pursuit of Happyness, Chris Gardner (Willard Carroll Smith Jr.)
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="item item-video3">
+                    <figure>
+                        <video poster="" id="video9a_unique" preload="auto" controls>
+                            <source src="static/videos/male_ted.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption class="video-figcaption">
+                            Speech: TED Speech on AI Technology
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="item item-video4">
+                    <figure>
+                        <video poster="" id="video10a_unique" preload="auto" controls>
+                            <source src="static/videos/female_obama.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption class="video-figcaption">
+                            Talk: Talk on Higher Education
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="item item-video5">
+                    <figure>
+                        <video poster="" id="video10ai_unique" preload="auto" controls>
+                            <source src="static/videos/female_obama1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption class="video-figcaption">
+                            Talk: Talk on Higher Education
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
-  <!-- End video carousel -->
+</section>
+<!-- End video carousel -->
   
   <section class="hero is-small">
     <div class="hero-body">
@@ -862,22 +863,110 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // 当一个视频开始播放时，暂停所有其他视频
-      const videos = document.querySelectorAll('video');
+ <script>
+document.addEventListener('DOMContentLoaded', function () {
+    // 获取所有视频元素
+    const videos = document.querySelectorAll('video');
+    // 获取轮播容器
+    const carousel = document.getElementById('results-carousel1');
+    // 轮播定时器
+    let carouselInterval;
+    // 轮播间隔时间（毫秒）
+    const intervalTime = 5000;
 
-      videos.forEach((video) => {
-          video.addEventListener('play', () => {
-              videos.forEach((vid) => {
-                  if (vid !== video && !vid.paused) {
-                      vid.pause();
-                  }
-              });
-          });
-      });
+    // 原有功能：一个视频播放时暂停其他视频
+    videos.forEach((video) => {
+        video.addEventListener('play', () => {
+            videos.forEach((vid) => {
+                if (vid !== video && !vid.paused) {
+                    vid.pause();
+                }
+            });
+            // 新增：视频播放时停止轮播
+            stopCarousel();
+        });
     });
-  </script>
+
+    // 新增：视频暂停时恢复轮播（如果没有其他视频在播放）
+    videos.forEach(video => {
+        video.addEventListener('pause', () => {
+            const isAnyPlaying = Array.from(videos).some(v => !v.paused);
+            if (!isAnyPlaying) {
+                startCarousel();
+            }
+        });
+
+        // 新增：视频播放结束时恢复轮播
+        video.addEventListener('ended', () => {
+            startCarousel();
+        });
+
+        // 新增：处理全屏状态对轮播的影响
+        video.addEventListener('fullscreenchange', handleFullscreen);
+        video.addEventListener('webkitfullscreenchange', handleFullscreen);
+        video.addEventListener('mozfullscreenchange', handleFullscreen);
+    });
+
+    // 新增：轮播自动切换函数
+    function startCarousel() {
+        // 清除已有定时器，避免重复触发
+        if (carouselInterval) clearInterval(carouselInterval);
+
+        carouselInterval = setInterval(() => {
+            // 获取当前激活的视频项（需根据实际轮播样式调整，此处假设用active类标记）
+            const currentActive = carousel.querySelector('.item.active');
+            // 获取下一个视频项（最后一项则循环到第一项）
+            let nextItem = currentActive ? currentActive.nextElementSibling : null;
+            if (!nextItem) nextItem = carousel.querySelector('.item:first-child');
+
+            // 切换激活状态（需根据实际轮播逻辑调整）
+            if (currentActive) currentActive.classList.remove('active');
+            nextItem.classList.add('active');
+        }, intervalTime);
+    }
+
+    // 新增：停止轮播
+    function stopCarousel() {
+        if (carouselInterval) {
+            clearInterval(carouselInterval);
+            carouselInterval = null;
+        }
+    }
+
+    // 新增：处理全屏状态
+    function handleFullscreen() {
+        const isFullscreen = !!document.fullscreenElement || 
+                            !!document.webkitFullscreenElement || 
+                            !!document.mozFullScreenElement;
+        
+        if (isFullscreen) {
+            // 全屏时停止轮播
+            stopCarousel();
+        } else {
+            // 退出全屏时，若没有视频播放则恢复轮播
+            const isAnyPlaying = Array.from(videos).some(v => !v.paused);
+            if (!isAnyPlaying) {
+                startCarousel();
+            }
+        }
+    }
+
+    // 新增：鼠标悬停轮播时停止，离开时恢复（无视频播放状态下）
+    carousel.addEventListener('mouseenter', () => {
+        stopCarousel();
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+        const isAnyPlaying = Array.from(videos).some(v => !v.paused);
+        if (!isAnyPlaying) {
+            startCarousel();
+        }
+    });
+
+    // 初始化轮播（默认启动）
+    startCarousel();
+});
+</script>
 
 </body>
 </html>
