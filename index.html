@@ -38,7 +38,7 @@
   <script src="static/js/index.js"></script>
   
   <style>
-    /* 图片轮播样式 */
+    /* 原有样式保持不变 */
     figure.image {
       margin-bottom: 20px;
       text-align: center;
@@ -61,7 +61,6 @@
       margin-right: auto;
     }
 
-    /* 自定义子标题样式 */
     .custom-subtitle {
       font-weight: 600;
       color: #4a4a4a;
@@ -249,6 +248,7 @@
 </head>
 <body>
 
+  <!-- 页面内容保持不变 -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -461,7 +461,7 @@
 <section class="hero is-small">
     <div class="hero-body">
         <div class="container">
-            <h3 class="subtitle is-4 custom-subtitle">Cross Actors Generation (please use navigation buttons to change videos)</h3>
+            <h3 class="subtitle is-4 custom-subtitle">Cross Actors Generation (use navigation buttons to change videos)</h3>
             <div id="results-carousel1" class="carousel results-carousel">
                 <div class="item item-video1">
                     <figure>
@@ -838,23 +838,32 @@
 
  <script>
 document.addEventListener('DOMContentLoaded', function () {
-    // 初始化轮播组件，禁用自动滚动
+    // 彻底禁用轮播自动滚动
+    // 初始化轮播时明确设置自动播放为false
     $('#results-carousel1').carousel({
-        // 移除自动滚动配置
-        // interval: 5000,  // 注释掉自动滚动时间间隔
-        // loop: true        // 注释掉循环滚动
+        autoPlay: false,  // 明确禁用自动播放
+        interval: false,  // 禁用时间间隔
+        loop: false       // 禁用循环
     });
     
     $('#results-carousel2').carousel({
-        // 移除自动滚动配置
-        // interval: 5000,
-        // loop: true
+        autoPlay: false,
+        interval: false,
+        loop: false
     });
 
-    // 获取所有视频元素
-    const videos = document.querySelectorAll('video');
+    // 额外的保险措施：移除可能存在的自动播放定时器
+    const carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(carousel => {
+        // 清除任何可能存在的自动播放定时器
+        if (carousel.carousel && carousel.carousel.interval) {
+            clearInterval(carousel.carousel.interval);
+            carousel.carousel.interval = null;
+        }
+    });
 
-    // 一个视频播放时暂停其他视频
+    // 视频播放控制
+    const videos = document.querySelectorAll('video');
     videos.forEach((video) => {
         video.addEventListener('play', () => {
             videos.forEach((vid) => {
